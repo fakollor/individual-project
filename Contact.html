@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Contact Me</title>
+    </head>
+    <body>
+        <!--HEADER-------------->
+        <h2>Get In Touch</h2>
+        <!--NAVIGATION---------->
+        <a href="Home.html">Home</a>
+        <a href="Resume.html">About</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="ContactPage.html">Contact Me</a>
+        <!--CONTENT------------->
+        <h4>Let me know how I can make your vision come to life!</h4>
+        <form>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" required>
+            <label for="email">Email:</label>
+            <input id="email" type="email" required><br><br>
+        </form>
+        <form>
+            <label for="phone">Phone:</label>
+            <input id="phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+        </form>
+        <form>
+            <label for="message"></label>
+            <textarea id="message" name="message" rows="8" cols="32" placeholder="Your Message"></textarea><br>
+            <input type="submit" value="Send">
+        </form>
+    </body>
+</html>
