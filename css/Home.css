@@ -1,0 +1,518 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_GbQbMZhLw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Josefin bold';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMZhLw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    display: grid;
+    max-width: 5000px;
+    grid-template-rows: 100px;
+    grid-template-columns: 2fr 4fr;
+    height: 100%;
+}
+
+.mainLeft {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: #ece8d4;
+}
+
+.menuName {
+    display: table-cell;
+    border: solid;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+.mainRight {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.menuNav {
+    display: table-cell;
+    border: solid;
+    text-align: right;
+    vertical-align: middle;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.menuNav ul {
+    list-style: none;
+}
+
+.menuNav li {
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.menuNav a {
+    text-decoration: none;
+    color: black;
+}
+
+#mainPage {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "mainImg bioTitle secondImg"
+    "mainImg bioTitle secondImg"
+    "mainImg bioContent secondImg"
+    "mainImg bioContent secondImg"
+    "mainImg about secondImg";
+}
+
+#mainPage .mainImg{
+    grid-area: mainImg;
+    height: 600px;
+    background-image: url(../images/Me.jpeg);
+    background-size: cover;
+    border: solid;
+}
+
+#mainPage .bioTitle{
+    grid-area: bioTitle;
+    text-align: center;
+    padding-top: 40%;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 24px;
+    width: 500px;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+
+}
+
+#mainPage .bioContent{
+    grid-area: bioContent;
+    text-align: center;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    width: 500px;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    padding-bottom: 19%;
+    border-left: solid;
+    border-right: solid;
+}
+
+#mainPage .about{
+    grid-area: about;
+    font-family: 'Josefin bold', sans-serif;
+    text-align: center;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
+}
+
+.about a {
+    text-decoration: none;
+    color: black;
+}
+
+#mainPage .secondImg{
+    grid-area: secondImg;
+    width: 350px;
+    height: 600px;
+    border: solid;
+    background-image: url(../images/mystudio.jpg)
+    
+}
+
+.secondImg p{
+    font-family: 'Josefin bold', sans-serif;
+    text-align: center;
+    padding-top: 160%;
+    color: white;
+}
+
+.main img{
+    
+}
+
+/*Second Row*/
+
+#mainTwo {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "recentWrk experience other"
+    "recentWrk experience other"
+    "recentWrk experience other";
+}
+
+#mainTwo .recentWrk {
+    grid-area: recentWrk;
+    border: solid;
+    height: 450px;
+    background-image: url(../images/2Brown%20and%20Black%20Creative%20Resume.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 89%;
+    font-family: 'Josefin bold', sans-serif;
+}
+
+.recentWrk a {
+    text-decoration: none;
+    color: black;
+} 
+
+#mainTwo #experience {
+    grid-area: experience;
+    border: solid;
+    height: 450px;
+    position: relative;
+    text-align: center;
+}
+
+.bottom-left{
+    z-index: 5000;
+    position:absolute;
+    bottom: 22px;
+    left: 45%;
+    font-family: 'Josefin bold', sans-serif;
+}
+
+#mainTwo .other {
+    grid-area: other;
+    border: solid;
+    height: 450px;
+    background-image: url(../images/simba.jpg);
+    background-size: cover;
+    padding-top: 89%;
+    text-align: center;
+    font-family: 'Josefin bold', sans-serif;
+    
+}
+
+.other p {
+    color: white;
+}
+
+/*third row*/
+
+#mainThree {
+    display: grid;
+    max-width: 5000px;
+    /*max-height: 500px;*/
+    grid-template-columns: 1fr 1.1fr 0.8fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "education strategy skills"
+    "education strategy skills"
+    "education strategy skills";
+}
+
+#mainThree .education {
+    grid-area: education;
+    border: solid;
+    height: 500px;
+    text-align: center;
+    background-color: #c4d4e0;
+    display: ;
+}
+
+.education h3 {
+    padding-top: 20%;
+    padding-bottom: 2%;
+    font-family: 'Josefin sans', sans-serif;
+    font-family: 24px;
+}
+
+.education span{
+    font-family: 'Josefin sans', sans-serif;
+    padding-top:;
+}
+
+.education p{
+    padding-top: 150px;
+    font-family: 'Josefin bold', sans-serif;
+    padding-bottom: px;
+}
+
+
+
+#mainThree .strategy {
+    grid-area: strategy;
+    background-image: url(../images/biggerflatlay.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    text-align: center;
+    padding-top: 79%;
+    border: solid;
+    height: 500px;
+}
+
+.strategy a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Josefin bold', sans-serif;
+}
+
+#mainThree .skills {
+    grid-area: skills;
+    border: solid;
+    height: 500px;
+    background-color: #193446;
+}
+
+.skillset {
+    display: flex;
+    padding-left: 20%;
+    padding-top: 15%;
+    align-items: center;
+}
+
+.skillset img{
+    height: 5%;
+    width: 30px;
+}
+
+.skillset p{
+    font-size: 24px;
+    color: white;
+    padding-left: 5%;
+    font-family: 'Josefin sans', sans-serif;
+}
+
+.button {
+    padding-top: 21%;
+    text-align: center;
+    color: white;
+    font-family: 'Josefin bold', sans-serif;
+    
+}
+
+/*forth row*/
+
+#mainFour {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "style contactOne campaign"
+    "style contactTwo campaign"
+    "style contactThree campaign";
+}
+
+#mainFour .style {
+    grid-area: style;
+    border: solid;
+    height: 450px;
+    background-image: url(../images/music.jpg);
+    background-size: cover;
+    padding-top: 80%;
+    text-align: center;
+    font-family: 'Josefin bold', sans-serif;
+}
+
+#mainFour .contactOne {
+    grid-area: contactOne;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 25px;
+    font-family: 'Josefin sans', sans-serif;
+    line-height: 30px;
+    height: ;
+}
+
+#mainFour .contactTwo {
+    grid-area: contactTwo;
+    border-left: solid;
+    border-right: solid;
+    text-align: center;
+    font-family: 'Josefin sans', sans-serif;
+    padding-top:12%;
+    border: ;
+    height: ;
+}
+
+#mainFour .contactThree {
+    grid-area: contactThree;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
+    font-family: 'Josefin bold', sans-serif;
+    text-align: center;
+    padding-top: 29%;
+    border: ;
+    height: ;
+}
+
+.contactThree a {
+    text-decoration: none;
+    color: black;
+}
+
+.popup {
+    background-color: rgba(0,0,0,0.6);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /*padding-top: 9%;*/
+    text-align: left;
+    
+}
+
+.popupContent {
+    height: 450px;
+    width: 450px;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+    font-family: 'Josefin sans', sans-serif;
+    border-radius: 10%;
+}
+
+.popupContent h2{
+    text-align: center;
+}
+
+form {
+    margin: 20px;
+    display: inline-block;
+}
+
+input{
+    display: block;
+}
+
+.sendButton {
+    color: white;
+    background-color: black;
+    width: 75px;
+    border: none;
+    border-radius: 10%;
+    font-family: 'Josefin bold', sans-serif;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    font-size: 55px;
+    cursor: pointer;
+}
+
+
+#mainFour .campaign {
+    grid-area: campaign;
+    border: solid;
+    height: 450px;
+    background-image: url(../images/img3.JPG);
+    padding-top: 80%;
+    font-family: 'Josefin bold', sans-serif;
+    text-align: center;
+}
+
+.campaign a{
+    text-decoration: none;
+    color: black;
+}
+
+#social {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "instagram linkedin facebook";
+}
+
+#social .instagram {
+    grid-area: instagram;
+    border: solid;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 25px;
+    
+}
+
+#social .linkedin {
+    grid-area: linkedin;
+    border: solid;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 25px;
+    
+}
+
+#social .facebook {
+    grid-area: facebook;
+    border: solid;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 25px;
+}
+
+footer h4 {
+    padding: 55px;
+    text-align: center;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 500px) {
+    #mainPage {
+        grid-template-columns: 3fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .education p {
+        padding-top: 100px;
+    }
+    /*#mainThree .strategy {
+        padding-top: 60%;*/
+    }
+    
+}
